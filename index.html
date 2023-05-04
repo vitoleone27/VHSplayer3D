@@ -1,0 +1,85 @@
+<!doctype html>
+
+<html>
+    <head>
+      <link rel="shortcut icon" href="#">
+        <meta charset="utf-8">
+
+        <title>VHS Player</title>
+
+        <!-- Load utilities and functions -->
+        <script src="common/utilities.js"></script>
+        <script src="common/gl-matrix.js"></script>
+        <script src="tools.js"></script>
+
+        <!-- Load the code for this example -->
+        <script src="VHSplayer.js"></script>
+
+        <!-- Style the canvas -->
+        <style type="text/css">
+            html, body {
+
+              position: absolute;
+              background-image: url('background.png');
+              background-repeat: no-repeat;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              z-index: -2;
+            }
+            select {
+              position: absolute;
+              right: 30%;
+              bottom: 27.5%;
+              width:  10%;
+              height: 10%;
+            }
+            input{
+              position: absolute;
+              right: 67.5%;
+              bottom: 46%;
+              width:  10%;
+              height: 10%;
+              z-index: 0;
+            }
+            video {
+              position:absolute;
+              right: 30%;
+              bottom: 49.5%;
+              max-width: 100%;
+              width: 640px;
+              z-index: -1;
+          }
+        </style>
+    </head>
+    <body>
+        
+        <!-- Define the canvas to use for the WebGL example -->
+        <canvas id="webgl-canvas" width="400" height="400">
+            Your browser doesn't support the HTML5 canvas element.
+        </canvas>
+        
+        <select id="texture" disabled="true">
+          <option value="cows">Cows Grazing</option>
+          <option value="rapids">Running Creek</option>
+          <option value="fight">Jungle Fight</option>
+        </select>
+
+        <input id="slider" name="slider" type="range" min="0" max="1.0" step="0.1" value=".5">
+
+        <audio id="click" src = "button.mp3">
+          Your browser does not support the audio element.
+        </audio>
+        <audio id="VHS" src = "VHS.mov">
+          Your browser does not support the audio element.
+        </audio>
+      
+
+      <video id="movie" width="400" height="400" src = "cows.mp4">
+        Your browser does not support the video tag.
+      </video>
+    </body>
+
+  
+    
+</html>
