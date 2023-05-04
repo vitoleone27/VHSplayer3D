@@ -1,2 +1,3 @@
 # VHSplayer3D
-3D UI VHS player where user is able to select a "movie" from a menu which dynamically updates a HTML video element for a user's viewing 
+3D UI VHS player where user is able to select a "movie" from a menu which dynamically updates a HTML video element for a user's viewing. There is a volume slider on lower left corner or screen in order to adjust the movies volume. Clicking the VHS starts the insertion animation, and similarly clicking the eject button starts the ejection animation. If a movie is ejected, it is automatically paused and that specific movie will start from that position when inserted again. When VHS is inserting/ejecting or a button is clicked, appropriate audio is played. 
+Warning: Violence in the Jungle Fight movie. Watch at own risk.
